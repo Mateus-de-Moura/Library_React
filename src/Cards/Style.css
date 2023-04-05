@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(236, 236, 232);
+}
+#Cards{
+    width: 12rem;
+    height: 21rem;
+    margin-left: 1rem;
+    margin-right: 2px;
+    border: none;
+    margin-top: 1rem;   
+    background-color: rgb(236, 236, 232); 
+}
+#Cards img{
+    width: 10rem;
+    height: 12rem;
+    margin-top: 2px;
+    margin-left: 13px;
+    box-shadow: 1px 1px 1px gray;
+}
+.CardsDescription{
+    display: flex;
+    flex-direction: row;
+}
+#Cards:hover{    
+    background-color: rgb(255, 255, 255);
+    border: 1px solid white;
+    box-shadow: 5px 8px 10px gray;    
+}
+
+.card-body span{
+    margin-left: 15px;
+}
+
+#CardsDescription{
+    border: 1px solid;
+    height:  28rem;
+    background-color: rgb(218, 188, 188);
+}
+#favoritos{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    display: flex;
+    flex-direction: row;
+}
+#titulo{
+    margin-top: 2rem;
+    margin-left: 6rem;
+}

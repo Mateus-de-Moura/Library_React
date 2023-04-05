@@ -1,0 +1,135 @@
+#row {
+    display: flex;
+    flex-direction: row;
+    margin-left: -55px;
+}
+
+#imagemprincipal {
+    margin-left: -20px;
+    margin-top: 10px;
+    width: 300px;
+    height: 350px;
+}
+
+#descricao {
+    margin-left: 14px;
+    margin-top: 10px;
+}
+
+#descricao h5 {
+    margin-top: -10px;
+}
+
+#nameAutor {
+    color: blue;
+}
+
+#cardcompra {
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+#descript {
+    display: flex;
+    flex-direction: row;
+}
+
+#cardcompra {
+    display: flex;
+    flex-direction: row;
+}
+
+#descricaoLivro {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+}
+
+#descricaoLivro p {
+    margin-top: -15px;
+}
+
+#tituloDesc {
+    padding-top: 15px;
+    margin-bottom: 40px;
+}
+
+#MenorPreco {
+    background-color: #04aa73;
+    border-radius: 10px;
+    width: 110px;
+    height: 30px;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+#btnComprar {
+    background-color: #0098AC;
+    width: 350px;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#linha {
+    margin-top: 1rem;
+    border: 1px solid gray;
+}
+
+#localidadeVenda {
+    display: flex;
+    flex-direction: column;
+}
+
+.Compra {
+    padding-left: 5rem;
+}
+
+#botoesAcao {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#botoesAcao button {
+    width: 180px;
+    height: 40px;
+}
+
+#btnfavoritos {
+    border-radius: 10px;
+    background-color: gray;
+    border: none;
+}
+#dtValor{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+#dtValor h7{
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#btnfavoritos svg{
+    margin-right: 4px;
+}
+
+#categorias{   
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
+
+#categorias h5{
+    margin-left: 2rem;
+}
+#btnAvaliacao{
+    border-radius: 10px ;
+    background-color: #0098AC;
+}
+#btnAvaliacao svg{
+    margin-right: 4px;
+    margin-bottom: 3px;
+}

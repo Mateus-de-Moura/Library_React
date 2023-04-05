@@ -1,0 +1,93 @@
+button{
+   color: white;
+   margin-left: 1rem;
+   background-color: transparent;
+   border: none;
+   margin: 0;
+}
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.Logout{
+    display: flex;
+    flex-direction: row;
+}
+.Logout a{
+     margin-top: 8px;
+    color: white;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+.Logout svg{
+    color: white;
+    margin-right: 1rem;
+    font-size: 20px;   
+}
+
+#drop{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 10px;
+    border-radius: 5px;
+}
+#dropdown-basic{
+     size: 1px;
+    border-radius: 10px;
+}
+#DropMenu {   
+    background-color: black;
+}
+
+#btnBuscar svg{
+    color: black;
+    border: 2px solid rgb(11, 228, 173);
+    font-size: 28px;
+    margin-left: 3px;
+    cursor: pointer;
+    background-color: rgb(11, 228, 173);
+    border-radius: 4px;
+}
+#home{
+    color: white;
+    margin-left: 0px;
+}
+#divhome svg{
+    margin-left: .5rem;
+    font-size: 20px;
+    margin-bottom: 1px;
+}
+#divhome{
+    margin-left: 8px;
+   
+}
+#itencarrinho{
+    background-color: red;
+    color:white;
+    margin-top: -15px;   
+    padding: 1px;
+    border-radius: 30px;
+    margin-left: -15px;
+    padding: 5px;
+}
+#inputBusca{
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    margin-top: 5px;
+}
+#inputBusca:focus{
+    box-shadow: none;
+}
+#quntidade button{
+    color: black;
+}
+#deleteItemCar svg{
+    color: gray;
+}
+#deleteItemCar svg:hover{
+    color: red;
+}
+

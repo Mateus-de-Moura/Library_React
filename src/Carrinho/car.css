@@ -1,0 +1,113 @@
+#Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -80px;
+    margin-top: -4rem;
+}
+#containerButons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#header {  
+    padding-top: 8px;
+    margin-top: 6rem;
+   border: 1px solid rgb(201, 196, 196);  
+   width: 900px;  
+   height: 40px;
+   background-color: rgb(223, 222, 222);  
+}
+
+#bodyCar{   
+    padding-top: 8px;    
+   border: 1px solid rgb(201, 196, 196);  
+   width: 900px;  
+   height: 200px;   
+}
+
+#correio{    
+   padding-top: 8px;    
+   border: 1px solid rgb(201, 196, 196);  
+   width: 900px;  
+   height: 100px;
+   background-color: rgb(223, 222, 222);
+}
+
+#total{
+    margin-top: 5.5rem;    
+    border: 1px solid rgb(201, 196, 196);  
+    width: 900px;  
+    height: 50px;    
+   
+}
+#total p{
+   font-weight: bold;
+   margin-top: 8px;
+   font-size: 20px;
+}
+#escolher{
+    margin-top: 1rem;
+    margin-left: 39.5rem;
+    width: 300px;
+}
+#finalizar{
+    margin-top: 1rem;
+    margin-left: -5rem;
+    width: 300px;
+}
+#value p{
+    font-weight: bold;
+    margin-left: 25rem;
+    margin-top: 2rem;
+    margin-right: -100rem;
+}
+#bodyCar img{
+   height: 180px;
+   width: 140px;
+}
+#deleteIten {
+    margin-top: 10px;
+    margin-left: 15rem;
+    
+    font-size: 40px;
+}
+#deleteItemCar{
+   cursor: pointer;
+
+}
+#deleteItemCar:hover{
+    cursor: pointer;
+    color: red;
+ }
+ #quntidade{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    margin-right: 5rem;
+ }
+ #quntidade p{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    font-size: 20px;    
+ }
+ #quntidade svg{
+   cursor: pointer;  
+   font-size: 25px;
+ }
+ #quntidade svg:hover{
+    cursor: pointer;  
+    color: blue;
+  }
+  #informacaoCart{
+    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
