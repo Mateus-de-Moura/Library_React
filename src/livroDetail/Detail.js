@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, Navigate, useParams } from 'react-router-dom'
 import NavBar from '../Navbar/NavBar'
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
@@ -9,6 +9,7 @@ import { AiFillHeart } from "react-icons/ai";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
 
 import './detail.css';
 
@@ -51,17 +52,21 @@ function Detail() {
   function Compra(id, idUsuario, idlivro){  
    var IdUser =  localStorage.getItem("IdUser") ;
     
-    axios.post(`https://localhost:44395/Book/Cart`, {         
+    axios.post(`https://localhost:44395/Cart/AddNewIten`, {         
          idUsuario: IdUser,
          idlivro: Id
     }, {
       headers: { 'Authorization': 'Bearer ' + localStorage.getItem("Token") }
     })
       .then((response) => {       
-        document.querySelector("#itencarrinho").innerHTML = `${response.data}`; 
-        window.location.href = `/Car`;
+         document.querySelector("#itencarrinho").innerHTML = `${response.data}`; 
+        window.location.href = '/Car';
+        <Link to="/Car"/>      
 
       }).catch(
+       
+        window.location.href = '/Car'
+          
     );
   }
 

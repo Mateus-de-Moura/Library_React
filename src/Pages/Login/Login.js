@@ -5,6 +5,9 @@ import './Style.css'
 import { Alert } from 'bootstrap';
 
 function Login() {
+  function redirect(){
+     window.location.href = "/Registre";
+  }
 
   localStorage.removeItem("Logado");
   window.onload = function () {
@@ -46,26 +49,35 @@ function Login() {
 
   }
   return (
-    <div class="login-form">
+
+    
+    <div class="login-form">    
       <form>
         <div >
           <h2 class="text-center">Login</h2>
+          
           <div class="form-group">
             <input id='email' type="text" class="form-control" placeholder="Email" required="required" />
           </div>
           <div class="form-group">
             <input id='senha' type="password" class="form-control" placeholder="Senha" required="required" />
           </div>
+          <div class="form-group" id='check'>
+            <br></br>
+            <input  type="checkbox" id="conect" />
+            <label for="conect">Manter-me conectado</label>
+          </div>
           <div id='erro'>
 
           </div>
           <div class="form-group">
             <button id='enviar' class="btn btn-primary btn-block">Entrar</button>
-            <Link to={"/Registre"}> <button id='enviar' class="btn btn-danger btn-block">Criar conta</button></Link>
+            <button onClick={()=> redirect()} id='enviar' class="btn btn-secondary btn-block">Criar conta</button>
           </div>
         </div>
       </form>
     </div>
+   
   )
 }
 

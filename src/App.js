@@ -4,6 +4,7 @@ import Login from "./Pages/Login/Login";
 import Detail from "./livroDetail/Detail";
 import Registre from './Pages/Login/Registre/Registre'
 import { PrivateRoute } from "./Routes/PrivateRoute";
+import EditUser from "./Edit/EditUser.js";
 import Car from "./Carrinho/Car";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/Registre"  element={<Registre />} /> 
         <Route path="/Home"  element={<PrivateRoute><Home /></PrivateRoute>} />      
         <Route path="/Car"  element={<PrivateRoute><Car /></PrivateRoute>} /> 
+        <Route path="/Edit"  element={<EditUser />} />
       </Routes>
     </div>
   );

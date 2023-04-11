@@ -10,18 +10,9 @@ import { FaCaretRight, FaCaretLeft } from "react-icons/fa";
 
 
 import './car.css';
+import { redirect } from 'react-router-dom';
 
 function Car() {
-
-    // window.onload = function aa() {
-    //     if (document.querySelector("#itencarrinho").textContent === "0") {
-    //         document.querySelector("#containerButons").style.display = 'none';
-    //         alert("Carrinho vazio !!")          
-    //     }
-    //     else {
-    //         document.querySelector("#containerButons").style.display = 'block';
-    //     }
-    // }
 
     const [LivroCompra, SetLivroCompra] = useState();
     useEffect(() => {
@@ -31,23 +22,25 @@ function Car() {
         var Id = localStorage.getItem("IdUser");
         const IdUser = localStorage.getItem("IdUser")
 
-        axios.get(`https://localhost:44395/Book/GetCart/${Id}`, {
+        axios.get(`https://localhost:44395/Cart/GetCart/${Id}`, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem("Token")
             }
         })
             .then((response) => {
-                console.log(response.data);
+                console.log(response);
                 SetLivroCompra(response.data);
                 document.querySelector("#itencarrinho").innerHTML = `${response.data.length}`;
 
+                if (response.status == 401) {
+                    window.location.href = "/"
+                }
             }).catch(
         );
-
     }, []);
 
     function DeleteIten(IdLivro) {
-        axios.delete(`https://localhost:44395/Book/DeleteItemCart/${IdLivro}`, {
+        axios.delete(`https://localhost:44395/Cart/DeleteItemCart/${IdLivro}`, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem("Token")
             }
@@ -76,7 +69,7 @@ function Car() {
     }
     function update(valor, IdCart) {
 
-        axios.put(`https://localhost:44395/Book/UpdateAmount`,
+        axios.put(`https://localhost:44395/Cart/UpdateAmount`,
             {
                 Quantidade: valor,
                 Id: IdCart
@@ -86,8 +79,9 @@ function Car() {
             })
     }
     return (
-        <>
+        <div id='container_Principal'>
             <NavBar />
+            
             { /* grid principal */}
             {LivroCompra?.map(l => {
                 return <Container fluid id='Container'>
@@ -109,9 +103,9 @@ function Car() {
                     <Row id='correio'>
                         <Col id='ColumnCorreio' >
                             <strong><p>ENTREGA BÁSICA</p></strong>
-                            <p id="Frete">Frete grátis nas compras a partir de R$ 110,00 e até 2000g.</p>
+                            <strong><p id="Frete">Frete grátis.</p></strong>
                         </Col>
-                        <Col>
+                        <Col >
                             <Row id='value'>
                                 <p>Valor: R$ {l.valor}</p>
 
@@ -130,14 +124,14 @@ function Car() {
             })}
 
             { /* Botoes  */}
-            <Container fluid id='containerButons'>
+            <Container id='containerButons'>
                 <Row id='total'>
                     <Col >
                         <Row>
                             <p>total </p>
                         </Row>
                     </Col>
-                    <Col >
+                    <Col id='valorTotal'>
                         <Row>
                             <p>R$ 8,00 </p>
                         </Row>
@@ -152,7 +146,7 @@ function Car() {
                     </Col>
                 </Row>
             </Container>
-        </>
+        </div>
     )
 }
 

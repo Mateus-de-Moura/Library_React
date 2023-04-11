@@ -19,7 +19,7 @@ function Card() {
                 setLivros(response.data);
                 
             }).catch(
-
+              
             );
     }, []);
 

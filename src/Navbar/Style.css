@@ -30,8 +30,9 @@ button{
 #drop{
     margin-right: 1rem;
     margin-left: 1rem;
-    font-size: 10px;
+    font-size: 30px;
     border-radius: 5px;
+   
 }
 #dropdown-basic{
      size: 1px;
@@ -73,6 +74,7 @@ button{
     padding: 5px;
 }
 #inputBusca{
+    margin-left: -20px;
     border: none;
     border-radius: 5px;
     height: 30px;
@@ -90,4 +92,30 @@ button{
 #deleteItemCar svg:hover{
     color: red;
 }
+
+#fotoUser{
+    border: 1px solid gray;
+    height: 40px;
+    width: 40px;
+    margin-right: -10px;
+    border-radius: 30px;
+    background-position: center;
+    background-size: cover;
+    
+}
+#dropdown-basic{
+    background: transparent;
+    border-color: transparent;
+    margin-left: -30px;
+    box-shadow: none;
+    color: transparent;
+}
+
+#dropdown-basic:hover{
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+   
+}
+
 
