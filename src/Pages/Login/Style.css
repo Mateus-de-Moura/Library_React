@@ -73,3 +73,8 @@
     margin-right: 10px;
     margin-top: 6px;
 }
+#loginGoogle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
