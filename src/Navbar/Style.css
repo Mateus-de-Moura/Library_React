@@ -114,10 +114,8 @@ button{
 #dropdown-basic:hover{
     background: transparent;
     border-color: transparent;
-    box-shadow: none;   
-}
-#actionAdm{
-    display: none;
+    box-shadow: none;
+   
 }
 
 

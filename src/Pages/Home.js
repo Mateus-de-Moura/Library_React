@@ -1,10 +1,9 @@
 import React from 'react';
 import { useEffect } from 'react';
 
-import Nav from '../Navbar/NavBar'
+import NavBar from '../Navbar/NavBar'
 import Carrosel from '../Carroucel/Carrocel';
 import Card from '../Cards/Card';
-
 
 function Home() {  
   // window.onbeforeunload = function() {
@@ -15,10 +14,9 @@ function Home() {
   return (
     <>
     <div className="Home">
-    <Nav/>
+    <NavBar/>
     <Carrosel/>
     <Card />
- 
     </div>  
     </>
   )
