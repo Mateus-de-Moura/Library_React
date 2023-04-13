@@ -47,8 +47,7 @@ function Login() {
         else {
           var usuario = 'logado';
           var token = response.data
-          token = token.split(":");
-          alert(token);
+          token = token.split(":");         
           localStorage.setItem('IdUser', token[2].trim());
           localStorage.setItem('Logado', usuario);
           localStorage.setItem("Token", token[1].trim());
@@ -86,7 +85,8 @@ function Login() {
           var usuario = 'logado';
           var token = response.data;
           token = token.split(":");
-          alert(token[1].trim());
+          alert(token[3].trim());
+          localStorage.setItem("perfil", token[3].trim());
           localStorage.setItem('IdUser', token[2].trim());
           localStorage.setItem('Logado', usuario);
           localStorage.setItem("Token", token[1].trim());

@@ -87,7 +87,7 @@ function Detail() {
               <IoIosStar />
               <IoIosStar />
               <p>4 de 5 estrelas</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam orci nisl, volutpat pellentesque tristique ut, efficitur eu tellus. Cras mollis pulvinar ipsum, vitae vehicula ex commodo lobortis. Aenean molestie fringilla mi. Praesent eleifend nibh at varius faucibus. Ut dignissim diam ac rutrum condimentum. </p>
+              <p>{l.sumario} </p>
               <div id='botoesAcao'>
                 <Button id='btnAvaliacao' variant="primary">
                   <IoIosStar />

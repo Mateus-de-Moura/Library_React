@@ -81,18 +81,24 @@ function Car() {
     return (
         <div id='container_Principal'>
             <NavBar />
-            
+
             { /* grid principal */}
             {LivroCompra?.map(l => {
                 return <Container fluid id='Container'>
                     <Row id='header'>
                         <Col>
-                            <p>{l.titulo} - Taboão da Serra, SP</p>
+                            <p>{l.titulo} - {l.estado}, {l.uf}</p>
                         </Col>
                     </Row>
                     <Row id='bodyCar'>
                         <Col >
                             <img src={l.urlImagem} />
+                        </Col>
+                        <Col id='descricaoCarrinhoLivro'>
+                        <strong><p>{l.titulo}</p></strong>
+                        <p>{l.autor}</p>
+                        <p>Ano: {l.ano}</p>
+                        <p>Idioma: {l.idioma}</p>
                         </Col>
                         <Col id='quntidade' >
                             <button onClick={() => DownQuant(l.id)}><FaCaretLeft /></button>
@@ -124,6 +130,7 @@ function Car() {
             })}
 
             { /* Botoes  */}
+            {LivroCompra != null ? 
             <Container id='containerButons'>
                 <Row id='total'>
                     <Col >
@@ -146,6 +153,8 @@ function Car() {
                     </Col>
                 </Row>
             </Container>
+           :<div></div> }
+
         </div>
     )
 }
